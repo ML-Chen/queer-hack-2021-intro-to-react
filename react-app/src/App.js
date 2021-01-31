@@ -1,23 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import image from './images/event.png';
+import reaction from './images/reaction.png';
+import like from './images/like.png';
+import comment from './images/comment.png';
+import share from './images/share.png';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="post">
+        <div className="account">
+          <strong>ACM at UCLA</strong>
+        </div>
+        <img className="postImage" src={image}/>
+        <div className="reaction-line">
+          <img className="reaction" src={reaction}/>
+          <p>Eric, Nareh, and 10 others</p>
+        </div>
+        <hr className="line"/>
+        <div className="actions-line">
+          <div className="action">
+            <img className="icon" src={like}/>
+            <p>Like</p>
+          </div>
+          <div className="action">
+            <img className="icon" src={comment}/>
+            <p>Comment</p>
+          </div>
+          <div className="action">
+            <img className="icon" src={share}/>
+            <p>Share</p>
+          </div>
+        </div>
+        
+      </div>
     </div>
   );
 }
