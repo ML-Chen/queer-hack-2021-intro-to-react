@@ -1,0 +1,49 @@
+
+  .post{
+    width: 50%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(169,169,169);
+    padding: 10px;
+  }
+  
+  .postImage{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .reaction-line{
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .post p{
+    display: inline;
+    color:rgb(169,169,169);
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+  }
+  
+  .reaction{
+    width: 15px;
+  }
+  
+  .line{
+    color:	rgb(169,169,169);
+    width: 90%
+  }
+  
+  .actions-line{
+    text-align: center;
+  }
+  
+  .icon{
+    height: 20px;
+  }
+  
+  .action{
+    display: inline;
+    margin: 30px;
+  }
