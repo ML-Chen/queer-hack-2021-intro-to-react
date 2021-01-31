@@ -7,7 +7,7 @@ import './Post.css';
 
 function Post() {
     return (
-      <div className="post">
+      <div className="postBox">
         <div className="account">
           <strong>ACM at UCLA</strong>
         </div>
@@ -31,7 +31,6 @@ function Post() {
             <p>Share</p>
           </div>
         </div>
-        
       </div>
   );
 }
