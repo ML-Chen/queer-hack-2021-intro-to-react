@@ -1,5 +1,7 @@
 # Hack Off The Hill 8: Intro to React
 
+In this workshop, you will learn what React.js is, why we use React to create amazing websites, and dive into how to start your own React application!
+
 **Teachers**: [Nareh Agazaryan](https://github.com/nareha), [Eric Yang](https://github.com/eric8yang)
 
 ## Resources
