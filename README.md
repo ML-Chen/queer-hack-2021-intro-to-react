@@ -152,3 +152,24 @@ We call the `*array*.map()` function for evens to loop through the entire array 
 Now we should have an array with all of our original numbers divided by 2! If we go into our browser console and run `console.log(newNumbers);` after entering the previous two lines, we will get the desired output of `[ 1, 2, 3, 4, 5 ]`!
 
 ## Finished Fakebook
+
+Now that we know about props, lets add that to our `Post` component!
+
+```js
+function Post(props) {
+    return (
+      <div className="postBox">
+        <div className="account">
+          <strong>{props.account}</strong>
+        </div>
+        <img className="postImage" src={props.image}/>
+        ...
+      </div>
+    );
+}
+```
+We add `props` to the component function parameters inside the parantheses, and modify account and image to display `{*props*.account}` and `{*props*.image}` respectively!
+
+We can take out the image important statement in `Post.js`, since we don't need to import specific images and hardcode them here!
+
+// TODO: `App.js` and `.map()`
