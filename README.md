@@ -22,10 +22,30 @@ In this workshop, you will learn what React.js is, why we use React to create am
 
 ## Background
 ### What is React?
+React is a Javascript framework founded and maintained by Facebook. It's currently one of the most important skills to have if trying to go into web/app development. React allows for users to build interactive user interfaces easily with the help of real-time updates. You can learn more about React here: 
+- <a href="https://reactjs.org" target="_blank">React Website</a>
 ### Why use React?
+React is the top Javascript extension that recruiters are looking for. Many of the top tech companies (including Facebook, Netflix, Twitter, Reddit, etc.) use React to design their webpages. The framework is best known for its ability to create **components** that break down a page into smaller sections. These components can also be reused and customized to display repeated features with different information (think of a Facebook feed where every post is slightly different).
 ## Setting Up React Apps
+One of the first steps to working with React is installing Node.js, which can be found here:
+- <a href="https://nodejs.org/en/" target="_blank">Node Website</a>
+Node allows for users to create a development server where changes in the code you are working on can be displayed in real-time. The next step is to open up Terminal(Mac) or Powershell(Windows). VSCode, which is used in this workshop, provides a convenient terminal within the editor itself. The line you'll need to run in your terminal to set up React is `npx create-react-app <app_name>`. After doing this, you run `npm start` for Node to begin your development server.
 ## Working with React Apps
+The first thing you'll notice when working with React apps is that the default page will just show some random React information. However, you'll be able to edit this through changing things in your `App.js` file, which is the main Javascript file that is "rendered." What this means is that React will go ahead and insert the code you write into the HTML in your `index.html` file at the `div` element with `id="root"`. When you first create your app, feel free to explore around to better understand this concept. 
+
+When creating components, you will need to create a new `.js` file and utilize imports and exports. Essentially, at the end of your components, you will want to include a line that says `export default <component_name>` with the component name filled in. Your component will be defined by a `function <component_name>()` that returns the elements that you want rendered. In your `App.js` file, you can import your component by writing `import <component_name> from '<path_to_component>'`. You will then be able to create elements of this type within your file. For example, if we are creating a **Post** component, after importing it into `App.js` we will be able to write: `<Post />` to display a post.
+
 ### Syntax
+React takes advantage of a new type of syntax called JSX. JSX is code that looks like HTML but in reality defines a React element. An example of this would be:
+`const elem = <h1>I love Hack</h1>;`
+
+JSX elements are what you will return from your functions and are also what is "replacing" the "root" in `index.html`. On top of just looking like HTML though, JSX elements are able to evaluate whatever you put in curly braces. An example of this would look something along these lines:
+```js
+const committee = ‘Hack’;
+const elem = <h1>I love {committee}</h1>;
+```
+Result: I love Hack
+
 ## Props
 We have an idea of components and how to create our own, but so far we've been hard coding the information we want to have within the component. How do we customize the infomation within the component to have different info without repeating the code over again?
 
