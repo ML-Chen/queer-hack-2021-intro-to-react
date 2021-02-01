@@ -29,7 +29,9 @@ React is the top Javascript extension that recruiters are looking for. Many of t
 ## Setting Up React Apps
 One of the first steps to working with React is installing Node.js, which can be found here:
 - <a href="https://nodejs.org/en/" target="_blank">Node Website</a>
+
 Node allows for users to create a development server where changes in the code you are working on can be displayed in real-time. The next step is to open up Terminal(Mac) or Powershell(Windows). VSCode, which is used in this workshop, provides a convenient terminal within the editor itself. The line you'll need to run in your terminal to set up React is `npx create-react-app <app_name>`. After doing this, you run `npm start` for Node to begin your development server.
+
 ## Working with React Apps
 The first thing you'll notice when working with React apps is that the default page will just show some random React information. However, you'll be able to edit this through changing things in your `App.js` file, which is the main Javascript file that is "rendered." What this means is that React will go ahead and insert the code you write into the HTML in your `index.html` file at the `div` element with `id="root"`. When you first create your app, feel free to explore around to better understand this concept. 
 
