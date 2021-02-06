@@ -10,15 +10,15 @@ In this workshop, you will learn what React.js is, why we use React to create am
 
 ## What we'll be learning today
 
-- [Background]()
-  - [What is React?]()
-  - [Why use React?]()
-- [Setting Up React Apps]()
-- [Working with React Apps]()
-  - [Syntax]()
-- [Components]()
-- [Props]()
-- [*array*.map()]()
+- [Background](#background)
+  - [What is React?](#what-is-react?)
+  - [Why use React?](#why-use-react?)
+- [Setting Up React Apps](#setting-up-react-apps)
+- [Working with React Apps](#working-with-react-apps)
+  - [Syntax](#syntax)
+- [Components](#components)
+- [Props](#props)
+- [*array*.map()](#array.map())
 - [Finished Demo](./react-app)
 
 ## Background
@@ -132,13 +132,13 @@ Name: DNA.
 Props are extremely useful and play in important part in reusable components in React!
 
 ## *array*.map()
-Before we get into `*array*.map()`, let's define arrays!
+Before we get into `array.map()`, let's define arrays!
 
 Arrays are a collection of items of the same type. You make have an array of number `[1, 2, 3, 4, 5]`, or an array of strings `[“hello”, “this”, “is”, “an”, “array”]`, or really any data type! Arrays are very convenient for storing items of the same data type.
 
 What if we wanted to process the array and modify the array or use it within our code? In JavaScript, we have a handy function called `.map()`. What this allows us to do is to run a for loop on an array.
 
-Specifically what `*array*.map()` does is take every item in the array, perform a specific operation (as defined by the function we give), and return a new array that is the result of that operation.
+Specifically what `array.map()` does is take every item in the array, perform a specific operation (as defined by the function we give), and return a new array that is the result of that operation.
 
 That sounds like... a lot. But we can break it down with some basic examples! Take some imaginary array of fruits for example. We have an apple, orange, and a banana.
 
@@ -152,14 +152,14 @@ Let's take an array of the first 5 positive even numbers.
 const evens = [ 2, 4, 6, 8, 10 ];
 ```
 
-I've decided I want to divide all my even numbers by 2. We can call `*array*.map()` to help us accomplish this!
+I've decided I want to divide all my even numbers by 2. We can call `array.map()` to help us accomplish this!
 
 ```js
 const evens = [ 2, 4, 6, 8, 10 ];
 const newNumbers = evens.map( num => { return num / 2 });
 ```
 
-We call the `*array*.map()` function for evens to loop through the entire array of even numbers. The function inside of the parantheses of map takes each number (which we call num) and returns that number divided by 2.
+We call the `array.map()` function for evens to loop through the entire array of even numbers. The function inside of the parantheses of map takes each number (which we call num) and returns that number divided by 2.
 
 Now we should have an array with all of our original numbers divided by 2! If we go into our browser console and run `console.log(newNumbers);` after entering the previous two lines, we will get the desired output of `[ 1, 2, 3, 4, 5 ]`!
 
@@ -184,9 +184,80 @@ We add `props` to the component function parameters inside the parantheses, and 
 
 We can take out the image important statement in `Post.js`, since we don't need to import specific images and hardcode them here!
 
-// TODO: `App.js` and `.map()`
+Now that `Post.js` is ready, let's use what we learned about `prop`s and `array.map()` and apply it to `App.js`!
 
+We can start my importing all the necessary images for our posts, and create an array that holds each post, with an account text and an post image property.
+
+```js
+/* images for posts */
+import image from './images/event.png';
+import hacksprint from './images/hacksprint.png';
+import impact from './images/impact.png';
+
+const posts = [
+  {
+    account: 'ACM at UCLA',
+    image: image
+  },
+  {
+    account: 'Eric Yang',
+    image: hacksprint
+  },
+  {
+    account: 'Nareh Agazaryan',
+    image: impact
+  }
+];
+```
+
+The import syntax is similar to how we imported images previously! In addition, we now have a variable `posts` that is an array of some properties! Each element in the array has an account and an image property. We will utilize this really similarly to how we utilized `props`! Let's take a look at the rest of the code, the actual `App()` function!
+
+```js
+function App() {
+  return (
+    <div className="App">
+      {
+        posts.map( post => {
+          return <Post 
+            account={post.account}
+            image={post.image}
+            key={post.account}
+          />
+        })
+      }
+    </div>);
+  
+}
+
+export default App;
+```
+
+As we see here, the App will display something based off the `posts.map()` function, which is our implementation of `array.map()`! Let's break it down.
+
+We see that `posts.map()` is of similar syntax to our earlier examples. We will have some function in the parantheses that takes each post (each element in the `posts` array) and returns (displays on the screen, in this case) a `Post` component based on the account and image property that we specified earlier!
+
+Similar to how we did: 
+```js 
+<Song name="DNA." artist="Kendrick Lamar"  />
+```
+and to how we called props in our `props` additions in `Post.js`, we take the account and image components of each post, and pass that into props for our Post component!
+
+For example, with
+```js
+account: 'ACM at UCLA',
+image: image
+```
+it is equivalent to if we rendered a post component in the manner we learned earlier.
+```js 
+<Post name='ACM at UCLA' artist={image}  />
+```
+However, we may process many, *many* posts from the array efficiently and avoid repeating many lines of code for each style of the component!
+
+> You may notice we have added a `key` property to the map function. This is because of the following error that you may find in your console. Of course, it is just a warning, but it is best practice to fix all warnings as it may lead to issues down the development road!
+![Key Warning in Console](./images/keywarning.png)
 > There is a bit of a complex and involved reason for why React would prefer the key prop, but the explanation is out of the scope of this workshop. If you're interested in learning about it, a great and thorough explanation can be found <a href="https://reactjs.org/docs/reconciliation.html" target="_blank">here</a>!
+
+Now our Fakebook is complete!
 
 ## More React Topics
 If you'd like to continue your React tutorial, the React documentation is a great way to get started. They also have a <a href="https://reactjs.org/tutorial/tutorial.html" target="_blank">tutorial</a> on their website!
