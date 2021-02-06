@@ -6,6 +6,7 @@ In this workshop, you will learn what React.js is, why we use React to create am
 
 ## Resources
 - <a href="https://tinyurl.com/hoth8-react-slides" target="_blank">Slides</a>
+- <a href="https://code.visualstudio.com/download" target="_blank">Text Editor (VS Code)</a>
 
 ## What we'll be learning today
 
@@ -173,3 +174,8 @@ We add `props` to the component function parameters inside the parantheses, and 
 We can take out the image important statement in `Post.js`, since we don't need to import specific images and hardcode them here!
 
 // TODO: `App.js` and `.map()`
+
+> There is a bit of a complex and involved reason for why React would prefer the key prop, but the explanation is out of the scope of this workshop. If you're interested in learning about it, a great and thorough explanation can be found <a href="https://reactjs.org/docs/reconciliation.html" target="_blank">here</a>!
+
+## More React Topics
+If you'd like to continue your React tutorial, the React documentation is a great way to get started. They also have a <a href="https://reactjs.org/tutorial/tutorial.html" target="_blank">tutorial</a> on their website!
