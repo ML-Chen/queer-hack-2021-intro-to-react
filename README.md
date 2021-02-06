@@ -18,7 +18,7 @@ In this workshop, you will learn what React.js is, why we use React to create am
   - [Syntax](#syntax)
 - [Components](#components)
 - [Props](#props)
-- [*array*.map()](#array.map())
+- [*array*.map()](#*array*.map())
 - [Finished Demo](./react-app)
 
 ## Background
