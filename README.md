@@ -49,6 +49,17 @@ const elem = <h1>I love {committee}</h1>;
 ```
 Result: I love Hack
 
+## Components
+One of the most important parts of React is the idea of components. Essentially, components allow you to reuse your code to display UI elements over and over. For example, here is a snippet of Facebook's code: 
+
+![Facebook Components](./images/components.png)
+
+As you can see, it would be tedious to just copy paste our long div's over and over so components help simplify the process. Breaking down a page into separate components also allows to code everything easier, for we can focus on one part at a time rather than coding an entire page. Here is a possible of a Facebook post (some of these can be broken down even further if necessary)
+
+![Facebook Post Components](./images/postComponents.png)
+
+In our demo, we explore the creation of a ~~Facebook~~ Fakebook post component combining what we know about JSX and HTML/CSS.
+
 ## Props
 We have an idea of components and how to create our own, but so far we've been hard coding the information we want to have within the component. How do we customize the infomation within the component to have different info without repeating the code over again?
 
