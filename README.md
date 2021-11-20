@@ -1,8 +1,8 @@
-# Hack Off The Hill 8: Intro to React
+# queer_hack 2021: Intro to React
 
 In this workshop, you will learn what React.js is, why we use React to create amazing websites, and dive into how to start your own React application!
 
-**Teachers**: [Nareh Agazaryan](https://github.com/nareha), [Eric Yang](https://github.com/eric8yang)
+This workshop is based on a workshop by ACM Hack at UCLA! 
 
 ## Resources
 - <a href="https://tinyurl.com/hoth8-react-slides" target="_blank">Slides</a>
@@ -10,16 +10,20 @@ In this workshop, you will learn what React.js is, why we use React to create am
 
 ## What we'll be learning today
 
-- [Background](#background)
-  - [What is React?](#what-is-react?)
-  - [Why use React?](#why-use-react?)
-- [Setting Up React Apps](#setting-up-react-apps)
-- [Working with React Apps](#working-with-react-apps)
-  - [Syntax](#syntax)
-- [Components](#components)
-- [Props](#props)
-- [*array*.map()](#*array*.map())
-- [Finished Demo](./react-app)
+- [queer_hack 2021: Intro to React](#queer_hack-2021-intro-to-react)
+  - [Resources](#resources)
+  - [What we'll be learning today](#what-well-be-learning-today)
+  - [Background](#background)
+    - [What is React?](#what-is-react)
+    - [Why use React?](#why-use-react)
+  - [Setting Up React Apps](#setting-up-react-apps)
+  - [Working with React Apps](#working-with-react-apps)
+    - [Syntax](#syntax)
+  - [Components](#components)
+  - [Props](#props)
+  - [*array*.map()](#arraymap)
+  - [Finished Fakebook](#finished-fakebook)
+  - [More React Topics](#more-react-topics)
 
 ## Background
 ### What is React?
@@ -191,21 +195,21 @@ We can start my importing all the necessary images for our posts, and create an 
 ```js
 /* images for posts */
 import image from './images/event.png';
-import hacksprint from './images/hacksprint.png';
-import impact from './images/impact.png';
+import spooky from './images/spooky.png';
+import secureTheBag from './images/secure-the-bag.png';
 
 const posts = [
   {
-    account: 'ACM at UCLA',
+    account: 'queer_hack',
     image: image
   },
   {
-    account: 'Eric Yang',
-    image: hacksprint
+    account: 'Michael Chen',
+    image: spooky
   },
   {
-    account: 'Nareh Agazaryan',
-    image: impact
+    account: 'Lindsay Greene',
+    image: secureTheBag
   }
 ];
 ```
